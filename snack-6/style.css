@@ -1,0 +1,17 @@
+
+body{
+    display: flex;
+}
+.box{
+    height: 150px;
+}
+
+
+.grey{
+    background-color:grey;
+}
+
+
+.green{
+    background-color:green;
+}
