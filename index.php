@@ -65,8 +65,8 @@ $posts = [
 
 #stampa posts per data
 
-$arr_keys = array_keys($posts);
-var_dump($arr_keys);
+    $arr_keys = array_keys($posts);
+    var_dump($arr_keys);
 
 #creo un ciclo per prendere ogni chiave di posts
 
@@ -79,14 +79,16 @@ var_dump($arr_keys);
 #prendo post con data
     $date_posts = $posts[$arr_keys[$i]];
     var_dump($date_posts);
-#
+#creo ciclo con indice j altrimenti prende uktimo valore di i
     for($j = 0; $j < count($date_posts); $j++) { ?>
-
-
+        <ul>
+            <li>Title: <?php echo $date_posts[$j]['title']; ?></li>
+            <li>Author: <?php echo $date_posts[$j]['author']; ?></li>
+            <li>Text: <?php echo $date_posts[$j]['text']; ?></li>
+        </ul>
     <?php } ?>
-    ?>
-    <?php endfor; ?>
     
+    <?php endfor; ?>   
 </body>
 </html>
 
